@@ -1,5 +1,7 @@
 package hello.core.member;
 
+import org.springframework.context.annotation.Bean;
+
 import java.util.HashMap;
 import java.util.Map;
 
