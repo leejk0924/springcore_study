@@ -9,6 +9,7 @@ import org.springframework.context.support.GenericXmlApplicationContext;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class XmlAppContext {
+
     @Test
     void xmlAppContext() {
         ApplicationContext ac = new GenericXmlApplicationContext("appConfig.xml");
