@@ -1,11 +1,12 @@
 package hello.core.member;
 
-import org.springframework.context.annotation.Bean;
+
+import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 import java.util.Map;
 
-
+@Component("memoryMemberRepository")
 public class MemoryMemberRepository implements MemberRepository{
     // 실무에서는 concurrentHashMap 사용해야하지만 예제이기 때문에 그냥 HashMap 사용 (동시성 이슈로 인해)
     private static Map<Long, Member> store = new HashMap<>();
