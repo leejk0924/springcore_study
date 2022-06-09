@@ -33,4 +33,15 @@ public class ConfigurationSingletonTest {
         assertThat(memberService.getMemberRepository()).isEqualTo(memberRepository);
         assertThat(orderService.getMemberRepository()).isEqualTo(memberRepository);
     }
+
+    @Test
+    void configurationDeep() {
+        ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
+        AppConfig bean = ac.getBean(AppConfig.class);
+
+        System.out.println("bean = " + bean.getClass());
+        // 클래스명 뒤에 $$EnhancerBySpringCGLIB$$9c1df86 으로 출력      -> $$9c1df86는 클래스 정보
+
+
+    }
 }
